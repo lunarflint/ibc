@@ -18,7 +18,7 @@ RUN \
     mkdir /opt/ibc &&\
     (\
         cd /opt/ibc &&\
-        wget -O IBCLinux.zip https://github.com/IbcAlpha/IBC/releases/download/3.14.0/IBCLinux-3.14.0.zip &&\
+        wget -O IBCLinux.zip https://github.com/IbcAlpha/IBC/releases/download/3.16.2/IBCLinux-3.16.2.zip &&\
         unzip IBCLinux.zip &&\
         rm IBCLinux.zip &&\
         sed -e 's/^TWS_MAJOR_VRSN=.*$/TWS_MAJOR_VRSN='$(ls -1 /root/Jts)/ -e 's@^IBC_INI=.*$@IBC_INI=/root/ibc-config.patched.ini@' twsstart.sh > twsstart.patched.sh &&\
